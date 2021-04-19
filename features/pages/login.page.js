@@ -2,14 +2,13 @@ import { testController } from '../support/world'
 import { select } from '../support/utils'
 import { ClientFunction } from 'testcafe';
 
-const password = 'Atix2020';
 const dotenv = require('dotenv');
 
 export class Login {
   constructor () {
     dotenv.config();
     this.url = process.env.URL_HOST + `login`
-    this.urlHome = process.env.URL_HOST + `home`
+    this.urlHome = process.env.URL_HOST + `credentials`
   }
 
   emailImput  () {
@@ -36,12 +35,18 @@ export class Login {
     return select('#root > div > div > div > div > div > div.LoginFormContainer > form > div:nth-child(3) > div > div > div > div > div > button');
   }
 
-  userSettingsButton() {
-    return select ('.MuiButtonBase-root-86')
-  }
 
   logoutButton() {
-    return select('li.MuiButtonBase-root-86')
+    return select('#root > div > div > div > div > div > div.header > div.Sidebar > ul > li.ant-menu-item.logoutBottom > button')
+  }
+
+  //HOME SELECTORS
+  credentialsTitle () {
+    return select ('#root > div > div > div > div > div > div.Content > div > div.TitlePage > div > h1').innerText
+  }
+
+  semillasHomeImg () {
+    return select ('#root > div > div > div > div > div > div.header > div.TopNav > img').exists
   }
 
   async navigate () {
@@ -50,19 +55,18 @@ export class Login {
 
   async navigateHome () {
     dotenv.config();
-    this.urlHome = process.env.URL_HOST + `apps/home`;
+    this.urlHome = process.env.URL_HOST + `credentials`;
     console.log(this.urlHome);
     const getLocation = ClientFunction(() => document.location.href).with({ boundTestRun: testController });
     await testController.expect(getLocation()).contains(this.urlHome);
   }
   async navigateHomeAndExit () {
     dotenv.config();
-    this.urlHome = process.env.URL_HOST + `apps/home`;
+    this.urlHome = process.env.URL_HOST + `credentials`;
     console.log(this.urlHome);
     const getLocation = ClientFunction(() => document.location.href).with({ boundTestRun: testController });
     await testController
     .expect(getLocation()).contains(this.urlHome)
-    .click(this.userSettingsButton())
     .click(this.logoutButton())
     .expect(getLocation()).contains(this.url);
   }
@@ -72,11 +76,11 @@ export class Login {
       .click(this.emailImput())
       .typeText(this.emailImput(), email, { paste: true })
       .click(this.passwordImput())
-      .typeText(this.passwordImput(), password, { paste: true })
+      .typeText(this.passwordImput(), process.env.PASSWORD, { paste: true })
       .click(this.loginButton())
   }
 
-  async loginValidate (email) {
+  async loginValidate () {
     const loginTitle = this.loginTitle();
     const semillasTitle = this.semillasTitle();
     const semillasImg = this.semillasImg();
@@ -85,6 +89,13 @@ export class Login {
       .expect(semillasTitle).ok('El titulo de Semillas se visualiza', { allowUnawaitedPromise: false })
       .expect(semillasImg).ok('El logo de Semillas se visualiza', { allowUnawaitedPromise: false })
       .expect(loginTitle).eql("Para ingresar completá los siguientes campos")
-      .expect(singUpTitle).eql("¿No tienes una cuenta?")
+  }
+  async homeValidate () {
+    const credentialsTitle = this.credentialsTitle();
+    const semillasHomeImg = this.semillasHomeImg();
+
+    await testController
+      .expect(semillasHomeImg).ok('El logo de Semillas se visualiza', { allowUnawaitedPromise: false })
+      .expect(credentialsTitle).eql("Credenciales")
   }
 }

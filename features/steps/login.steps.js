@@ -15,6 +15,7 @@ When('Compruebo los criterios de aceptación', async () => {
 
 Then('retorna la pagina home', async () => {
   await pages.login.navigateHome();
+  await pages.login.homeValidate();
 });
 
 Then('Se visualiza el contenido de la pagina correctamente', async () => {
