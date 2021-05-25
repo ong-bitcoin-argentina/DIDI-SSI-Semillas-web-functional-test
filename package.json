@@ -1,6 +1,6 @@
 {
   "name": "DIDI-SSI-Semillas-web-functional-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Libreria de automation para la plataforma Semillas web desarrollada por ONG Bitcoin Argentina",
   "scripts": {
