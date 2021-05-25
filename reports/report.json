@@ -1,0 +1,258 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "WEB - Login/Seguridad",
+    "line": 1,
+    "id": "web---login/seguridad",
+    "tags": [],
+    "uri": "features\\scenarios\\login.feature",
+    "elements": [
+      {
+        "id": "web---login/seguridad;como-un-usuario-quisiera-iniciar-sesión-en-la-aplicación-web",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Como un usuario quisiera iniciar sesión en la aplicación web",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9930000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Ingreso a la pantalla de login",
+            "match": {
+              "location": "features\\steps\\login.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8817000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Ingreso con el usuario \"gastongenaud@didi.org.ar\"",
+            "match": {
+              "location": "features\\steps\\login.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6843000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "retorna la pagina home",
+            "match": {
+              "location": "features\\steps\\login.steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 263000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:103"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "web---login/seguridad;como-un-usuario-quisiera-visualizar-la-pantalla-de-login-de-la-aplicación-web",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Como un usuario quisiera visualizar la pantalla de login de la aplicación web",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6835000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "Ingreso a la pantalla de login",
+            "match": {
+              "location": "features\\steps\\login.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8914000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Compruebo los criterios de aceptación",
+            "match": {
+              "location": "features\\steps\\login.steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Se visualiza el contenido de la pagina correctamente",
+            "match": {
+              "location": "features\\steps\\login.steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3335000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:103"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "web---login/seguridad;como-un-usuario-quisiera-cerrar-sesión",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Como un usuario quisiera cerrar sesión",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7078000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "Ingreso a la pantalla de login",
+            "match": {
+              "location": "features\\steps\\login.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7905000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "Ingreso con el usuario \"gastongenaud@didi.org.ar\"",
+            "match": {
+              "location": "features\\steps\\login.steps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4876000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "retorna la pagina home y cierro sesión",
+            "match": {
+              "location": "features\\steps\\login.steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 755000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:103"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
