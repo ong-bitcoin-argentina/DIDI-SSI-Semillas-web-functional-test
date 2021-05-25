@@ -106,3 +106,4 @@ dist
 #Reports
 .-p
 .reports
+.reports/
