@@ -37,5 +37,4 @@ Contiene los textos de las features y su conversión a JS. Se llama la función 
 >  await pages.login.login(text);
 > });
 
-# ESCRITURA EN PROGRESO
 As [Gastón Genaud] writes this guide.
