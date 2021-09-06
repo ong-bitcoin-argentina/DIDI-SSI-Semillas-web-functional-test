@@ -1,6 +1,7 @@
 {
   "name": "@proyecto-didi/didi-ssi-semillas-web-functional-test",
-  "version": "1.0.2",
+  "public": true,
+  "version": "1.0.4",
   "description": "Libreria de automation para la plataforma Semillas web desarrollada por ONG Bitcoin Argentina",
   "scripts": {
     "lint": "eslint . --fix",
@@ -20,7 +21,7 @@
     "cucumber"
   ],
   "author": "Gaston Alejandro Genaud",
-  "license": "MIT",
+  "license": "SEE IN LICENCE",
   "homepage": "https://github.com/ong-bitcoin-argentina/DIDI-SSI-Semillas-web-functional-test#readme",
   "dependencies": {
     "base64-img": "^1.0.4",
