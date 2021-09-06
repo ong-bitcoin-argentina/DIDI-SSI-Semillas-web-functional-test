@@ -1,6 +1,6 @@
 {
-  "name": "@proyecto-didi/DIDI-SSI-Semillas-web-functional-test",
-  "version": "1.0.1",
+  "name": "@proyecto-didi/didi-ssi-semillas-web-functional-test",
+  "version": "1.0.2",
   "description": "Libreria de automation para la plataforma Semillas web desarrollada por ONG Bitcoin Argentina",
   "scripts": {
     "lint": "eslint . --fix",
